@@ -30,13 +30,13 @@ pipeline {
     }
     post {
         success {
-            slackSend message: "$BUILD_TAG"
+            slackSend message: "Success $BUILD_TAG"
         }
         unstable {
-            slackSend message: 'Unstable'
+            slackSend message: "Unstable $BUILD_TAG"
         }
         failure {
-            slackSend message: 'failure'
+            slackSend message: "failure $BUILD_TAG"
         }
     }
 }
