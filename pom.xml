@@ -38,4 +38,24 @@
 		</plugins>
 	</build>
 
+	<scm>
+		<connection>scm:git:https://github.com/dc-michal-michalski/szkolenie-cicd-jenkins-gitlab-example.git</connection>
+		<developerConnection>scm:git:https://github.com/dc-michal-michalski/szkolenie-cicd-jenkins-gitlab-example.git</developerConnection>
+		<url>https://github.com/dc-michal-michalski/szkolenie-cicd-jenkins-gitlab-example.git</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>server1</id>
+			<name>Releases</name>
+			<url>http://10.222.20.208:8081/repository/maven-repo-1-release/</url>
+		</repository>
+		<snapshotRepository>
+			<id>server1-snap</id>
+			<name>Snapshots</name>
+			<url>http://10.222.20.208:8081/repository/maven-repo-1-snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 </project>
