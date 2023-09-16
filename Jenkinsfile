@@ -24,7 +24,18 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn clean verify'
-                junit '**/target/**/*.xml'
+            }
+        }
+
+        stage('r1') {
+            steps {
+                sh 'mvn -B release:prepare'
+            }
+        }
+
+        stage('r2') {
+            steps {
+                sh 'mvn -B release:perform'
             }
         }
     }
